@@ -27,7 +27,9 @@ import { MessageService } from './message.service';
 export class MessageComponent {
 
     constructor(private messageService: MessageService,
-                private router: Router) { }
+                private router: Router) {
+                    console.log("In constructor");
+                }
 
     close(): void {
         // Close the popup.

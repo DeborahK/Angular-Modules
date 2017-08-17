@@ -41,7 +41,7 @@
                                 [style.width.px]='imageWidth'
                                 [style.margin.px]='imageMargin'>
                         </td>
-                        <td><a [routerLink]="['/products', product.id]">
+                        <td><a [routerLink]="['/products', product.productId]">
                                 {{ product.productName }}
                             </a>
 						</td>
@@ -52,12 +52,6 @@
                             <pm-star [rating]='product.starRating'
                                 (ratingClicked)='onRatingClicked($event)'>
 							</pm-star>
-                        </td>
-                        <td>
-                            <a class="btn btn-primary" 
-                               [routerLink]="[product.id, 'edit']">
-                                Edit
-                            </a>
                         </td>
                     </tr>
                 </tbody>

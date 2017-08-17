@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Component({
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
     errorMessage: string;
@@ -16,8 +17,8 @@ export class LoginComponent {
 
     login(loginForm: NgForm) {
         if (loginForm && loginForm.valid) {
-            let userName = loginForm.form.value.userName;
-            let password = loginForm.form.value.password;
+            const userName = loginForm.form.value.userName;
+            const password = loginForm.form.value.password;
             this.authService.login(userName, password);
 
             if (this.authService.redirectUrl) {
@@ -27,6 +28,6 @@ export class LoginComponent {
             }
         } else {
             this.errorMessage = 'Please enter a user name and password.';
-        };
+        }
     }
 }

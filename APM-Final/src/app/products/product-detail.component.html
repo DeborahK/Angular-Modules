@@ -33,22 +33,14 @@
                         </pm-star>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">Category:</div>
-                    <div class="col-md-6">{{product.category}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">Tags:</div>
-                    <div class="col-md-6">{{product.tags}}</div>
-                </div>
             </div>
 
-            <div class="col-md-6" *ngIf="product.imageUrl">
-                <img class="center-block img-responsive" 
-                     [style.width.px]="200" 
-                     [style.margin.px]="2" 
-                     [src]="product.imageUrl"
-                     [title]="product.productName">
+            <div class='col-md-6'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='product.imageUrl'
+                     [title]='product.productName'>
             </div>
         </div>
     </div>
@@ -56,10 +48,6 @@
     <div class='panel-footer'>
         <a class='btn btn-default' routerLink='/products'>
             <i class='glyphicon glyphicon-chevron-left'></i> Back
-        </a>
-        <a class="btn btn-primary" style="width:80px;margin-left:10px" 
-           [routerLink]="['edit']">
-            Edit
         </a>
     </div>
 </div>
