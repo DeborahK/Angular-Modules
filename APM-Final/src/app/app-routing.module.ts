@@ -26,9 +26,10 @@ import { PageNotFoundComponent } from './page-not-found.component';
                 ]
             },
             { path: 'products', redirectTo: 'home/products', pathMatch: 'full' },
+            { path: 'products/:id', redirectTo: 'home/products/:id', pathMatch: 'full' },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: '**', component: PageNotFoundComponent }
-        ], { enableTracing: true, preloadingStrategy: SelectiveStrategy }) // , { enableTracing: true })
+        ], { preloadingStrategy: SelectiveStrategy }) // , { enableTracing: true })
     ],
     providers: [ SelectiveStrategy ],
     exports: [ RouterModule ]
