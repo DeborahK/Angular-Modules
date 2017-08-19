@@ -4,30 +4,22 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard } from './user/auth-guard.service';
 import { SelectiveStrategy } from './selective-strategy.service';
 
-import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './home/welcome.component';
-import { PageNotFoundComponent } from './page-not-found.component';
+import { PageNotFoundComponent } from './home/page-not-found.component';
 
 @NgModule({
     imports: [
         RouterModule.forRoot([
+            { path: 'welcome', 
+              data: { shell: true },
+              component: WelcomeComponent },
             {
-                path: 'home',
-                component: HomeComponent,
-                children: [
-                    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-                    { path: 'welcome', component: WelcomeComponent },
-                    {
-                        path: 'products',
-                        canActivate: [ AuthGuard ],
-                        data: { preload: true },
-                        loadChildren: 'app/products/product.module#ProductModule'
-                    }
-                ]
+                path: 'products',
+                canActivate: [ AuthGuard ],
+                data: { preload: true },
+                loadChildren: 'app/products/product.module#ProductModule'
             },
-            { path: 'products', redirectTo: 'home/products', pathMatch: 'full' },
-            { path: 'products/:id', redirectTo: 'home/products/:id', pathMatch: 'full' },
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: '', redirectTo: 'welcome',data: { shell: true }, pathMatch: 'full' },
             { path: '**', component: PageNotFoundComponent }
         ], { preloadingStrategy: SelectiveStrategy }) // , { enableTracing: true })
     ],

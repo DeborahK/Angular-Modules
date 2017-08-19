@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { AuthService } from './auth.service';
 
@@ -13,9 +13,14 @@ export class LoginComponent {
     pageTitle = 'Log In';
 
     constructor(private authService: AuthService,
-                private router: Router) { }
+                private router: Router) {
+    }
 
-    login(loginForm: NgForm) {
+    cancel(): void {
+        this.router.navigate(['welcome']);
+    }
+
+    login(loginForm: NgForm): void {
         if (loginForm && loginForm.valid) {
             const userName = loginForm.form.value.userName;
             const password = loginForm.form.value.password;

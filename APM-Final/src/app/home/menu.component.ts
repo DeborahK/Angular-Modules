@@ -5,13 +5,12 @@ import { AuthService } from '../user/auth.service';
 import { MessageService } from '../messages/message.service';
 
 @Component({
-  selector: 'pm-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'pm-menu',
+  templateUrl: './menu.component.html'
 })
-export class HomeComponent implements OnInit {
-  get messageIsDisplayed(): boolean {
-    return this.messageService.isDisplayed;
+export class MenuComponent implements OnInit {
+  get displayMessages(): boolean {
+    return this.messageService.displayMessages;
   }
 
   constructor(private router: Router,
@@ -21,16 +20,16 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  displayMessages(): void {
-    this.messageService.isDisplayed = true;
+  showMessages(): void {
+    this.messageService.displayMessages = true;
   }
 
   hideMessages(): void {
-    this.messageService.isDisplayed = false;
+    this.messageService.displayMessages = false;
   }
 
   logOut(): void {
     this.authService.logout();
-    this.router.navigateByUrl('/home');
+    this.router.navigate(['/welcome']);
   }
 }

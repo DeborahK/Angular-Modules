@@ -12,9 +12,15 @@
     </div>
 
     <div class='panel-body'>
-        <div class='row' *ngFor="let message of messageService.messages; let i=index">
+        <div class='row' *ngFor="let message of messages; let i=index">
             <div class="col-md-12" *ngIf="i<10">
                 {{ message }}
             </div>
+        </div>
+        <div class='row' *ngIf='!(messages && messages.length)'>
+            <div class="col-md-12">
+                {{ noMessages }}
+            </div>
+        </div>
     </div>
 </div>

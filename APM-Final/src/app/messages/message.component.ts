@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { MessageService } from './message.service';
 
 @Component({
-    selector: 'messages',
+    selector: 'pm-messages',
     templateUrl: './message.component.html',
     styles: [
         '.message-row { margin-bottom: 10px }'
@@ -12,15 +12,15 @@ import { MessageService } from './message.service';
 })
 export class MessageComponent {
     pageTitle = 'Message Log';
+    noMessages = 'No messages';
+    get messages(): string[] {
+        return this.messageService.getMessages();
+    }
 
     constructor(private messageService: MessageService,
-                private router: Router) {
-                    console.log("In constructor");
-                }
+                private router: Router) { }
 
     close(): void {
-        // Close the popup.
-        this.router.navigate([{ outlets: { popup: null } }]);
-        this.messageService.isDisplayed = false;
+        this.messageService.displayMessages = false;
     }
 }

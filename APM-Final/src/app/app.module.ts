@@ -5,21 +5,21 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
-import { PageNotFoundComponent } from './page-not-found.component';
+import { PageNotFoundComponent } from './home/page-not-found.component';
+import { MenuComponent } from './home/menu.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
 /* Feature Modules */
 import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    PageNotFoundComponent,
-    HomeComponent
+    MenuComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
