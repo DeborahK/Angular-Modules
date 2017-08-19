@@ -1,0 +1,15 @@
+<pm-menu></pm-menu>
+
+<div class='container'>
+  <div *ngIf='!displayMessages'>
+    <router-outlet></router-outlet>
+  </div>
+  <div *ngIf='displayMessages'>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-4">
+      <pm-messages></pm-messages>
+    </div>
+  </div>
+</div>

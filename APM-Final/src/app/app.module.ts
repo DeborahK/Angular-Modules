@@ -13,13 +13,15 @@ import { AppRoutingModule } from './app-routing.module';
 /* Feature Modules */
 import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
+import { ShellComponent } from './home/shell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     MenuComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ShellComponent
   ],
   imports: [
     BrowserModule,
