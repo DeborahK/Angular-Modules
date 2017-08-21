@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
 import { MessageComponent } from './message.component';
-import { MessageService } from './message.service';
 
 @NgModule({
     imports: [
@@ -11,9 +10,6 @@ import { MessageService } from './message.service';
     ],
     declarations: [
         MessageComponent
-    ],
-    providers: [
-        MessageService
     ],
     exports: [
         MessageComponent

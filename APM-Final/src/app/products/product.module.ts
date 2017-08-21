@@ -5,7 +5,6 @@ import { SharedModule } from './../shared/shared.module';
 
 import { ProductListComponent } from './product-list.component';
 import { ProductDetailComponent } from './product-detail.component';
-import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
 
 import { ProductService } from './product.service';
 
@@ -19,8 +18,7 @@ import { ProductService } from './product.service';
   ],
   declarations: [
     ProductListComponent,
-    ProductDetailComponent,
-    ConvertToSpacesPipe
+    ProductDetailComponent
   ],
   providers: [
     ProductService

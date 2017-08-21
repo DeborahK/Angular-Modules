@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../messages/message.service';
+import { MessageService } from '../core/message.service';
 
 @Component({
   selector: 'pm-shell',

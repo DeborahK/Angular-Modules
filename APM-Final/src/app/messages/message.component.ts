@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MessageService } from './message.service';
+import { MessageService } from '../core/message.service';
 
 @Component({
     selector: 'pm-messages',

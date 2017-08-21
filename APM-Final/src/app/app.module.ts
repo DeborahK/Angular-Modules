@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
 import { ShellComponent } from './home/shell.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ShellComponent } from './home/shell.component';
     HttpClientModule,
     UserModule,
     MessageModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   bootstrap: [AppComponent]
 })

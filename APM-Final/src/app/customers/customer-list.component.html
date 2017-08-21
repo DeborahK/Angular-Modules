@@ -19,14 +19,16 @@
         <thead>
           <tr>
             <th>Full Name</th>
+            <th>Occupation</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor='let customer of filteredCustomers'>
-            <td><a [routerLink]="['/customers', customer.customerId]">
+            <td><a [routerLink]="['/customers', customer.id]">
                               {{ customer.lastName }}, {{ customer.firstName}}
                 </a>
             </td>
+            <td>{{ customer.occupation }}</td>
           </tr>
         </tbody>
       </table>

@@ -10,7 +10,7 @@ import { CustomerService } from './customer.service';
 export class CustomerListComponent implements OnInit {
   pageTitle: string = 'Customer List';
   errorMessage: string;
-  
+
   private _listFilter: string;
   get listFilter(): string {
       return this._listFilter;

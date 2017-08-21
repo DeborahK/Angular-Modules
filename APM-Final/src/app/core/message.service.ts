@@ -5,9 +5,11 @@ export class MessageService {
     private messages: string[] = [];
     displayMessages = false;
 
+    constructor() { }
+
     addMessage(message: string): void {
         const currentDate = new Date();
-        this.messages.unshift(message + ' at ' + currentDate.toLocaleString());
+        this.messages.unshift(message + '\n at ' + currentDate.toLocaleString());
     }
 
     getMessages(): string[] {

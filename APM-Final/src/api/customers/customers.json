@@ -1,24 +1,38 @@
 [
     {
-        "customerId": 1,
+        "id": 1,
         "firstName": "Jack",
-        "lastName": "Harkness"
+        "lastName": "Harkness",
+        "occupation": "Captain"
     },
     {
-        "customerId": 2,
+        "id": 2,
         "firstName": "Portia",
-        "lastName": "Lin"
-    },    {
-        "customerId": 5,
+        "lastName": "Lin",
+        "occupation": "Captain"
+    },
+    {
+        "id": 5,
         "firstName": "Irena",
-        "lastName": "Shaw"
-    },    {
-        "customerId": 10,
+        "lastName": "Shaw",
+        "occupation": "Scientist"
+    },
+    {
+        "id": 10,
         "firstName": "Marcus",
-        "lastName": "Boone"
-    },    {
-        "customerId": 22,
+        "lastName": "Boone",
+        "occupation": "Mercenary"
+    },
+    {
+        "id": 22,
         "firstName": "Gwen",
-        "lastName": "Cooper"
+        "lastName": "Cooper",
+        "occupation": "Constable"
+    },
+    {
+        "id": 25,
+        "firstName": "Malcolm",
+        "lastName": "Reynolds",
+        "occupation": "Captain"
     }
 ]

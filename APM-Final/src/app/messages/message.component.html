@@ -14,7 +14,7 @@
     <div class='panel-body'>
         <div class='row' *ngFor="let message of messages; let i=index">
             <div class="col-md-12" *ngIf="i<10">
-                {{ message }}
+                <pre>{{ message }}</pre>
             </div>
         </div>
         <div class='row' *ngIf='!(messages && messages.length)'>

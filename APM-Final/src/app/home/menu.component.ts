@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../user/auth.service';
-import { MessageService } from '../messages/message.service';
+import { MessageService } from '../core/message.service';
 
 @Component({
   selector: 'pm-menu',
