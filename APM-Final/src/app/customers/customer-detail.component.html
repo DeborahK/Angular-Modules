@@ -1,0 +1,22 @@
+<div class='panel panel-primary' *ngIf='customer'>
+  <div class='panel-heading'>
+    {{pageTitle + ': ' + customer.firstName + ' ' + customer.lastName}}
+  </div>
+
+  <div class='panel-body'>
+    <div class='row'>
+      <div class='col-md-3'>First Name:</div>
+      <div class='col-md-6'>{{customer.firstName}}</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-3'>Last Name:</div>
+      <div class='col-md-6'>{{customer.lastName}}</div>
+    </div>
+  </div>
+
+  <div class='panel-footer'>
+    <a class='btn btn-default' routerLink='/customers'>
+          <i class='glyphicon glyphicon-chevron-left'></i> Back
+      </a>
+  </div>
+</div>

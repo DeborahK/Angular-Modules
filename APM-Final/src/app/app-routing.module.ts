@@ -17,6 +17,12 @@ import { PageNotFoundComponent } from './home/page-not-found.component';
                 children: [
                     { path: 'welcome', component: WelcomeComponent },
                     {
+                        path: 'customers',
+                        canActivate: [AuthGuard],
+                        data: { preload: true },
+                        loadChildren: 'app/customers/customer.module#CustomerModule'
+                    },
+                    {
                         path: 'products',
                         canActivate: [AuthGuard],
                         data: { preload: true },

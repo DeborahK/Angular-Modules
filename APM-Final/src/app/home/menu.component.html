@@ -8,6 +8,9 @@
             <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                 <a routerLink='/products'>Product List</a>
             </li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                <a routerLink='/customers'>Customer List</a>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li *ngIf="authService.isLoggedIn()">

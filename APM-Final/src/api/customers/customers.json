@@ -1,0 +1,24 @@
+[
+    {
+        "customerId": 1,
+        "firstName": "Jack",
+        "lastName": "Harkness"
+    },
+    {
+        "customerId": 2,
+        "firstName": "Portia",
+        "lastName": "Lin"
+    },    {
+        "customerId": 5,
+        "firstName": "Irena",
+        "lastName": "Shaw"
+    },    {
+        "customerId": 10,
+        "firstName": "Marcus",
+        "lastName": "Boone"
+    },    {
+        "customerId": 22,
+        "firstName": "Gwen",
+        "lastName": "Cooper"
+    }
+]
